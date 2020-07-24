@@ -20,8 +20,17 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy(class="wow  animate__fadeInDown  ")
 		.container
-			+mnu()
+			.row
+				.col-lg-auto.col
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col.d-none.d-lg-block
+					//- +mnu()
+				.col-auto.d-none.d-sm-block
+					+soc()
+				.col-auto
+					+btnLink('Регистрация')
 					
 	// end top-nav

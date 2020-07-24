@@ -1,0 +1,51 @@
+
+	// start .sDay
+	.sDay {
+		--sTPB: #{rem(30)};
+		h2{
+			@extend .h3;
+			line-height: (40 / 24);
+			color: $primary;
+			font-weight: bold;
+		}
+		 &__item{
+			 border-radius: $h5-font-size;
+			 border: 1px solid #bdbdbd;
+			 background-color: #ffffff;
+			 min-height: calc(100% - 33px) ;
+			 margin-bottom: 33px;
+			 padding: rem(24) rem(36);
+		 }
+		 &__title{
+			 @extend .h4;
+			 color: $success;
+			//  font-weight: normal;
+			font-weight: bold;
+			max-width: rem(260);
+		 }
+		 p{
+			 margin-bottom: 0;
+			 line-height: 1.4;
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sDay

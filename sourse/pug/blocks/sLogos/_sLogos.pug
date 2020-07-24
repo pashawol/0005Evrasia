@@ -1,0 +1,15 @@
+mixin sLogos()
+	// start sLogos
+	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+		.container
+			+b.section-title(class="wow  animate__fadeInUp "   )
+				h2  Партнеры
+				
+			.row
+				mixin item(i)
+					+e.col.col-md-4(class="wow  animate__fadeInUp "   )
+								img.lazy(src="#" data-src=`img/svg/logo-${i}.svg`, alt="")
+				+item('1')
+				+item('2')
+				+item('3')
+	// end sLogos

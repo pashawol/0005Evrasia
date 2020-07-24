@@ -1,33 +1,31 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
+		@include media-breakpoint-up(sm) {
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+			padding-top: rem(60);
+		}
+		padding-top: rem(20);
+	.row{
+		align-items: center;
 	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
+			.container {
+				position: relative;
+			}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		@include media-breakpoint-up(sm) {
+		width: rem(160);
+		}
 	}
+	.soc{
+		@include media-breakpoint-up(sm) {
 
-	&__item {
-		display: inline-block;
-		list-style-type: none;
+			position: absolute;
+			right: 15px;
+			top: 100%;
+			margin-top: rem(48);
+		}
 	}
-
 	// 
 	@include media-breakpoint-up(xl) {}
 

@@ -3,20 +3,27 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
-
+include ../blocks/sGal/_sGal.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sDay/_sDay.pug 
+include ../blocks/sMembers/_sMembers.pug 
+include ../blocks/sCards/_sCards.pug 
+include ../blocks/sLogos/_sLogos.pug  
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Форум Евразия Global 2020'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
-	+header()
-
-		+top-nav()
-		+topLine()  
+	+header() 
+		+top-nav() 
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sGal
+	+sAbout
+	+sDay
+	+sMembers
+	+sCards
+	+sLogos
 	+footer()
 	

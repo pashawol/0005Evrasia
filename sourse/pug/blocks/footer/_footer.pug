@@ -1,4 +1,31 @@
 mixin footer()
-	+b.FOOTER.footer.block-with-lazy
+	+b.FOOTER.footer.block-with-lazy(class="wow  animate__fadeIn"   )
 		.container
-			h2 footer
+			.row
+				.col 
+					+e.text &copy;&nbsp;2020. Международный молодежный образовательный форум &laquo;Евразия Global&raquo;
+				.col-auto.order-sm-0.order-last
+					+soc()
+				.w-100
+				.col 
+					ul
+						li: a(href="#") Новости
+						li: a(href="#") О форуме
+						li: a(href="#") Участникам
+						li: a(href="#") Для СМИ
+
+						li: a(href="#") Команда форума
+						li: a(href="#") Задать вопрос
+				.col-sm-auto.text-sm-right
+					+e.link(href="#") Политика конфиденциальности
+					br
+					+e.link(href="#") Пользовательское соглашение
+					br
+					+btnLink('Регистрация')
+		+e.footer
+			.container
+				.row
+					+e.col.col
+						+e.text г.Оренбург ул. Девятого января 64
+					+e.col.col-sm-auto
+						+e.tel(href="tel:+7(3532)78-60-21") +7 (3532) 78-60-21
