@@ -2,13 +2,15 @@
 .headerBlock {
 	padding-top: rem(35);
 	// background-color: rgb(255, 255, 255);
-	 h1{
-		 font-weight: bold;
-		 color: $primary;
-		 line-height: (72 / 64);
-		 margin-bottom: em(12);
-	 }
-	 &__content{
+	h1{
+	 
+		font-weight: bold;
+		color: $primary;
+		line-height: (72 / 64);
+		margin-bottom: em(12);
+	}
+	&__content{
+	 
 		 position: relative;
 		 max-width: rem(627);
 
@@ -64,57 +66,7 @@
 		 position: relative;
 		 z-index: 4;
 	 }
-	 	&__line {
-	 		top: 0;
-			 // right: 0;
-			 left: 50%;
-			 transform: translateX(-50%);
-	 		position: absolute;
-	 		z-index: 2;
-			 pointer-events: none;
-			 //  width: 100%;
-			 //  @include media-breakpoint-up(md){
-				 // 	 z-index: 2;
-				 //  }
-				 //  z-index: -1;
-				 svg{
-					 // width: 110% !important;
-					 
-					}
-					&--slim{
-						@include media-breakpoint-down(md) {
-						 
-							top: 190px;
-							transform: translateX(-65%);
-						}
-					}
-					&--gradient{
-						@include media-breakpoint-down(lg) {
-
-							transform: translateX(-55%);
-						}
-						@include media-breakpoint-down(md) {
-							transform: translateX(-65%);
-							top: 90px;
-						}
-						@include media-breakpoint-down(sm) {
-							top: -75px;
-							transform: translateX(-70%);
-
-									}
-						
-				svg{
-
-					// width: 120vw !important;
-				}
-			}
-	 		&--default {
-	 			z-index: -1;
-
-	 		}
-	 	}
- 
-
+	 
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
@@ -156,3 +108,60 @@
 }
 
 // end.headerBlock
+
+
+.line {
+		top: 0;
+		// right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+		z-index: 2;
+		pointer-events: none;
+
+		//  width: 100%;
+		//  @include media-breakpoint-up(md){
+		// 	 z-index: 2;
+		//  }
+		//  z-index: -1;
+		svg {
+			// width: 110% !important;
+
+		}
+
+		&--slim {
+			@include media-breakpoint-down(md) {
+
+				top: 190px;
+				transform: translateX(-65%);
+			}
+		}
+
+		&--gradient {
+			@include media-breakpoint-down(lg) {
+
+				transform: translateX(-55%);
+			}
+
+			@include media-breakpoint-down(md) {
+				transform: translateX(-65%);
+				top: 90px;
+			}
+
+			@include media-breakpoint-down(sm) {
+				top: -75px;
+				transform: translateX(-70%);
+
+			}
+
+			svg {
+
+				// width: 120vw !important;
+			}
+		}
+
+		&--default {
+			z-index: -1;
+
+		}
+	}

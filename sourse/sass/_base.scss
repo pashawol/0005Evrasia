@@ -38,7 +38,10 @@ html {
 body {
 	min-width: 320px;
 	position: relative;
-
+	&.op0{opacity: 0;
+		@include mt;
+		overflow: hidden;
+}
 	&::before {
 		content: '';
 		position: absolute;
@@ -420,5 +423,76 @@ iframe {
 .section-wrapper{
 	position: relative;
 	z-index: 2;
+
+}
+
+.animate-items{
+// z-index: -1;
+}
+.animate-item{
+	position: absolute;
+	top: 100%;
+	&--1{
+		left: (-268px / 2);
+		top: 70px;
+		z-index: 2;
+	}
+	
+	&--2{
+		left: (107px);
+		top: 32px;
+		z-index: 2;
+	}
+	&--3{
+		left: (225px);
+		top: -80px;
+		transform: rotate(-30deg);
+	}
+	&--4{
+		left: (215px);
+		top: 130px;
+		z-index: 3;
+	}
+	&--5{
+		left: (-215px);
+		top: -130px;
+		z-index: 2;
+	}
+	&--6{
+		left: (325px);
+		top: -2px;
+	}
+	&--7{
+		left: (-725px);
+		top: 40px;
+	}
+ 
+	&--8{
+		left: (-695px);
+		top: -200px;
+		transform: rotate(30deg);
+		// z-index: 1;
+	}
+	&--9{
+		left: (-545px);
+		top: -500px;
+		// transform: rotate(30deg);
+	}
+	&--10{
+		left: (-200px);
+		top: -200px;
+		// transform: rotate(30deg);
+	}
+	&--11{
+		left: (60px);
+		top: 200px;
+		z-index: 2;
+		// transform: rotate(30deg);
+	}
+	&--12{
+		left: (100px);
+		top: 360px;
+		// transform: rotate(30deg);
+	}
 
 }

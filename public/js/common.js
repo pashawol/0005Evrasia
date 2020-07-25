@@ -81,7 +81,10 @@ function eventHandler() {
 			modifier: 1,
 			slideShadows: false
 		}
-	})); // modal window
+	}));
+	setTimeout(function () {
+		document.body.classList.remove('op0');
+	}, 300); // modal window
 
 	var wow = new WOW({
 		mobile: false,
@@ -93,6 +96,94 @@ function eventHandler() {
 	if (isIE11) {
 		$("body").prepend("<p   class=\"browsehappy container\">\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0432\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0435 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0438\u0439 \u0431\u0440\u0430\u0443\u0437\u0435\u0440. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, <a href=\"http://browsehappy.com/\" target=\"_blank\">\u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0432\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440</a>, \u0447\u0442\u043E\u0431\u044B \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C, \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u043C\u043E\u0433\u043E \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0430 \u0438 \u043F\u043E\u0432\u044B\u0441\u0438\u0442\u044C \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C.</p>");
 	}
+
+	var controller = new ScrollMagic.Controller({
+		container: "#main-wrapper",
+		vertical: false
+	});
+	var width = $(window).width();
+	var height = $(window).height();
+	var offsetEl = height * .52;
+	var durationEl = ($(window).height() - offsetEl) * 1.2;
+
+	function animateElem() {
+		var _TimelineMax;
+
+		var controller = new ScrollMagic.Controller(); // define movement of panels
+
+		var wipeAnimation = (_TimelineMax = new TimelineMax()).fromTo.apply(_TimelineMax, arguments); // in from left
+		// create scene to pin and link animation
+
+
+		new ScrollMagic.Scene({
+			triggerElement: this,
+			triggerHook: "onLeave",
+			duration: "150%"
+		}) // .setPin("#sBrendRepresent")
+		.setTween(wipeAnimation) // .addIndicators() // add indicators (requires plugin)
+		.addTo(controller);
+	} //axilary funcs
+
+
+	animateElem.call('#main-wrapper', '.animate-item--1', .1, {}, {
+		y: 1250,
+		x: width * .9
+	});
+	animateElem.call('#main-wrapper', '.animate-item--2', .1, {}, {
+		y: 1370,
+		x: width * .8
+	});
+	animateElem.call('#main-wrapper', '.animate-item--3', .1, {}, {
+		rotation: 160,
+		y: 1450,
+		x: width * .5
+	});
+	animateElem.call('#main-wrapper', '.animate-item--4', .1, {}, {
+		y: 1050,
+		x: width * .7
+	});
+	animateElem.call('#main-wrapper', '.animate-item--5', .1, {}, {
+		rotation: 260,
+		y: 1200,
+		x: width * 1.1
+	});
+	animateElem.call('#main-wrapper', '.animate-item--6', .1, {}, {
+		rotation: 60,
+		y: 1450,
+		x: width * .5
+	});
+	animateElem.call('#main-wrapper', '.animate-item--7', .1, {}, {
+		rotation: 360,
+		y: 1450,
+		x: width * 1.1
+	});
+	animateElem.call('#main-wrapper', '.animate-item--8', .1, {}, {
+		rotation: 460,
+		y: 1450,
+		x: width * 1.1
+	});
+	animateElem.call('#main-wrapper', '.animate-item--9', .1, {}, {
+		rotation: 460,
+		y: 1350,
+		x: width * .9
+	});
+	animateElem.call('#main-wrapper', '.animate-item--10', .1, {}, {
+		rotation: 460,
+		y: 1550,
+		x: width * 1.1
+	});
+	animateElem.call('#main-wrapper', '.animate-item--11', .1, {}, {
+		scale: 0.5,
+		rotation: 220,
+		y: 1180,
+		x: width * .8
+	});
+	animateElem.call('#main-wrapper', '.animate-item--12', .1, {}, {
+		scale: 0,
+		rotation: 220,
+		y: 1180,
+		x: width * .8
+	});
 }
 
 ;
