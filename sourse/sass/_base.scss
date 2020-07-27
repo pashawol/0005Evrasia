@@ -432,6 +432,10 @@ iframe {
 .animate-item{
 	position: absolute;
 	top: 100%;
+		@include media-breakpoint-down(sm) {
+			transform: none !important;
+			z-index: -1;
+		}
 	&--1{
 		left: (-268px / 2);
 		top: 70px;
@@ -449,9 +453,14 @@ iframe {
 		transform: rotate(-30deg);
 	}
 	&--4{
-		left: (215px);
-		top: 130px;
+		@include media-breakpoint-up(sm){
+			top: 130px;
+			left: (215px);
+		}
+		left: (285px);
+	top: 260px;
 		z-index: 3;
+
 	}
 	&--5{
 		left: (-215px);
@@ -459,8 +468,12 @@ iframe {
 		z-index: 2;
 	}
 	&--6{
-		left: (325px);
-		top: -2px;
+			@include media-breakpoint-up(sm) {
+
+				top: -2px;
+			}
+			top: 82px;
+			left: (325px);
 	}
 	&--7{
 		left: (-725px);
