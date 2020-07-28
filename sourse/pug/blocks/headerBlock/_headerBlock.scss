@@ -3,7 +3,9 @@
 	padding-top: rem(35);
 	// background-color: rgb(255, 255, 255);
 	position: relative;
+	@include media-breakpoint-up(sm) {
 	z-index: 4;
+	}
 	h1{
 	 
 		font-weight: bold;

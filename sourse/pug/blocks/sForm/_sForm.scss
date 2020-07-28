@@ -1,7 +1,45 @@
 
 	// start .sForm
 	.sForm {
-		 
+		background-color: rgba($color: #4CC0E4, $alpha: .1);
+		.container{
+			position: relative;
+		}
+		.section-title{
+			&__text{
+				@extend .h5;
+				max-width: rem(280);
+			}
+		}
+		h2{
+			color: $primary;
+			font-weight: bold;
+		}
+		picture{
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: auto;
+			z-index: -1;
+			img{
+				max-width: rem(793);
+			}
+		}
+		.form-wrap{
+			max-width: rem(449 + 30 + 352);
+			&__input{
+				background-color: #EEF9FD;
+			}
+			&__btn{
+				@extend .btn;
+				@extend .btn-primary;
+				width: rem(160);
+			}
+			textarea{
+				margin-bottom: rem(20);
+				height: rem(145);
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

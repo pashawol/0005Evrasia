@@ -1,9 +1,22 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+	+b.SECTION.sForm#sForm&attributes(attributes)
+		.container.section
+			+pic('form-img')
+			+b.section-title(class="wow  animate__bounceInUp "  )
+				h2 Остались вопросы?
+				+e.text Задайте их&nbsp;нам и&nbsp;мы&nbsp;ответим Вам в&nbsp;кратчайшие сроки
+			+form-wrap()(class="wow  animate__bounceInUp "   )
+				.row
+					.col-lg-6
+						+input("",'text','Ваше имя','name')
+						+input("",'tel','Номер телефона')(required)
+						+input("",'email','Ваш e-mail')
+					.col
+						+input("",'textarea','Ваш вопрос','text')
+						.row
+							.col
+								+polite
+							.col-auto
+								+e.BUTTON.btn(type="submit")  Отправить
 	// end sForm

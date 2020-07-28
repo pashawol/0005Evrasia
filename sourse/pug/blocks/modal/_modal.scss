@@ -2,7 +2,11 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-
+	border-radius: $border-radius;
+	@include media-breakpoint-up(md) {
+		padding: rem(30);
+	}
+	padding: rem(20) rem(15);
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -13,6 +17,13 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+}
+#modal-thanks{
+
+	max-width: 400px;
+}
+#modal-text{
+	max-width: 1000px;
 }
 
 a {

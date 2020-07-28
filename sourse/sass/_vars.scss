@@ -110,7 +110,7 @@ $enable-caret: true !default;
 $enable-rounded: true !default;
 $enable-shadows: false !default;
 $enable-gradients: false !default;
-$enable-transitions: false !default;
+$enable-transitions: true !default;
 $enable-reduced-motion: true !default;
 $enable-grid-classes: true !default;
 $enable-button-pointers: true !default;
@@ -507,10 +507,10 @@ $form-label-font-style: null !default;
 $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(19) !default;
+$input-padding-x: 1rem !default;
 $input-font-family: $input-btn-font-family !default;
-$input-font-size: $input-btn-font-size !default;
+$input-font-size: $h5-font-size !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: $input-btn-line-height !default;
 
@@ -527,7 +527,7 @@ $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $gray-700 !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: #BDBDBD !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 

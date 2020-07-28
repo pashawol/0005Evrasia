@@ -21,5 +21,5 @@ mixin ie11()
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
-mixin btnLink(t)
-	+e.btn(href="https://myrosmol.ru/measures/view/46042" target="_blank")= t
+mixin btnLink(t,a="https://myrosmol.ru/measures/view/46042")
+	+e.btn(href= a target="_blank")= t
