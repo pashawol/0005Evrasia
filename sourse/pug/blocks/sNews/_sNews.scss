@@ -1,0 +1,89 @@
+
+	// start .sNews
+	.sNews {
+		--sPB: #{rem(100)};
+		h2{
+			color: $primary;
+			font-weight: bold;
+		}
+		&__row{
+			@include media-breakpoint-up(lg) { 
+				grid-template-columns: repeat(3, 1fr);
+				grid-column-gap: 30px;
+				grid-row-gap: 30px;
+			}
+			
+			@include media-breakpoint-up(sm) {  
+				grid-template-columns: repeat(2, 1fr);
+			}
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+
+			display: grid;
+		}
+		&__title{
+			position: absolute;
+			// left: rem(28);
+			left: 0;
+			bottom: 0;
+			padding: rem(28);
+		}
+		&__date{
+			position: absolute;
+			top: rem(28);
+			left: rem(28);
+			background-color: $primary;
+			display: inline-block;
+			padding: rem(5) rem(10);
+		}
+		&__item{
+			display: block;
+			@include block;
+			border-radius: 20px;
+			overflow: hidden;
+			font-weight: 600;
+			color: #ffffff !important;
+			&::before{
+				
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background: linear-gradient(2.13deg, #000000 1.54%, rgba(0, 0, 0, 0) 56.57%),
+				url(image);
+				border-radius: 20px;
+				border-radius: 20px;
+			}
+			img{
+
+			}
+		}
+
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sNews

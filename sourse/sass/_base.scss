@@ -509,3 +509,12 @@ iframe {
 	}
 
 }
+
+.page-head{
+	h1{
+		@extend .h2;
+		font-weight: bold;
+		color: $primary;
+		max-width: rem(700);
+	}
+}

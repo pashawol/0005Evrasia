@@ -19,12 +19,16 @@
 				line-height: 1;
 			}
 			h2{
-				position: relative;
-				display: inline-block;
-				@extend .h5;
+				@extend .h1;
+				text-transform: uppercase;
 				font-weight: bold;
-				padding-right: rem(15);
-				margin-bottom: rem(30);
+				color: $primary;
+				// position: relative;
+				// display: inline-block;
+				// @extend .h5;
+				// font-weight: bold;
+				// padding-right: rem(15);
+				// margin-bottom: rem(30);
 				
 			}
 			&__text{
