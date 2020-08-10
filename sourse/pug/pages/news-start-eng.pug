@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sGal/_sGal.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sDay/_sDay.pug 
+include ../blocks/sMembers/_sMembers.pug 
+include ../blocks/sCards/_sCards.pug 
+include ../blocks/sLogos/_sLogos.pug  
+include ../blocks/sForm/_sForm.pug  
+include ../blocks/sNews/_sNews.pug  
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Registration for the online forum "Eurasia Global" is open!
+'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- //- +b.animate-items
+	//- - for (var x = 1; x < 13; x++)
+	//- 	+b.animate-item(class=`animate-item--${x}`  id=`animate-item--${x}`): img(src=`img/svg/el-${x}.svg`, alt="")
+	+header() 
+		+top-nav() 
+	+b.page-head.section
+		.container
+			h1 Registration for the online forum "Eurasia Global" is open!
+
+	.section.pt-0
+		.container
+			+pic('IMG_20200810_093129_648')(class="mb-3")
+			.h5 On&nbsp;August&nbsp;10, registration of&nbsp;participants for the online format of&nbsp;the Eurasia Global International Youth Forum starts. It&nbsp;will be&nbsp;arranged from September 2&nbsp;to&nbsp;7, and the offline forum will be&nbsp;held from September 2&nbsp;to&nbsp;8&nbsp;in&nbsp;Orenburg.
+			.h5 Specialists working in&nbsp;the field of&nbsp;international youth cooperation, youth leaders, young foreigners interested in&nbsp;interaction and cooperation with Russian youth aged 18&nbsp;to&nbsp;30 (up&nbsp;to&nbsp;35&nbsp;years for foreign participants) can become participants of&nbsp;the online forum.
+			.h5 A&nbsp;registered participant will have access to&nbsp;all the possibilities of&nbsp;the offline forum: voting, discussions, communication with other members of&nbsp;the forum, participation in&nbsp;the business program, Program&nbsp;2.0 and other activities.
+			.h5 Registration takes place in&nbsp;the AIS &laquo;Youth of&nbsp;Russia&raquo; and it&nbsp;will end on&nbsp;23&nbsp;August. Here is&nbsp;the link: https://myrosmol.ru/event/48517 
+			.h5 The purpose of&nbsp;the online forum is&nbsp;to&nbsp;integrate Russian and foreign speakers and participants, to&nbsp;include representatives of&nbsp;a&nbsp;large number of&nbsp;countries in&nbsp;the work, to&nbsp;provide an&nbsp;opportunity for those who could not take part in&nbsp;the events of&nbsp;the main program to&nbsp;become part of&nbsp;an&nbsp;international event.
+			.h5 Participants will be&nbsp;able to&nbsp;practice under the strict guidance of&nbsp;international professionals in&nbsp;online workshops and receive necessary advice from specialists. They will have access to&nbsp;broadcasts of&nbsp;media meetings: discussions, TED Talks, interviews and talk shows with invited guests on&nbsp;the main topic of&nbsp;the day, as&nbsp;well as&nbsp;to&nbsp;panel discussions with well-known leaders and public figures from Russia, Germany, Italy, the Netherlands, Egypt, Great Britain and other countries, and with representatives of&nbsp;companies such as&nbsp;Viber, Tilda Publisher and others. Participants will be&nbsp;able to&nbsp;work remotely in&nbsp;laboratories of&nbsp;all four areas of&nbsp;&laquo;Communities&raquo;, &laquo;International Cooperation&raquo;, &laquo;Sustainable Projects&raquo;, &laquo;Creative Economy&raquo;. Participation in&nbsp;networking sessions will enable forum users to&nbsp;exchange best practices, find contacts and partners from other countries. A&nbsp;special area of&nbsp;the business module of&nbsp;the online program will be&nbsp;devoted to&nbsp;interaction with young compatriots living abroad.
+			.h5 Within the framework of&nbsp;Program&nbsp;2.0, where participants prepare professional, cultural and thematic activities for other participants, a&nbsp;forum member from the online format will be&nbsp;able to&nbsp;conduct a&nbsp;workshop independently, as&nbsp;well as&nbsp;participate in&nbsp;voting for the best performance and influence the program.
+			.h5 It&nbsp;should be&nbsp;noted that this year the Forum will celebrate its fifth anniversary and for the first time will be&nbsp;held under the aegis of&nbsp;UNESCO. It&nbsp;will bring together 500 participants and 200 volunteers at&nbsp;its sites.
+			.h5 The International Youth Forum &laquo;Eurasia Global&raquo; is&nbsp;one of&nbsp;the seven forum platforms, which are granted federal status. It&nbsp;is&nbsp;held on&nbsp;the initiative of&nbsp;the Orenburg region government, supported by&nbsp;the President of&nbsp;Russia.
+			.h5 The organizers of&nbsp;the Forum are the Federal Agency for Youth Affairs, the Government of&nbsp;the Orenburg Region, the Federal State Budgetary Institution &laquo;Resource Youth Center&raquo;.
+			.h5 #ЕвразияGlobal #Евразия2020 #ресурсцентр #Росмолодежь #молодежьМира
+	+sNews
+	+sForm
+	+footer()
+	
