@@ -9,7 +9,10 @@
 			}
 		}
 		&__block-left{
-			max-width: rem(406);
+				@include media-breakpoint-up(xl) {
+
+					max-width: rem(406);
+				}
 		}
 		&__block{
 			border: 1px solid $primary; 
@@ -23,7 +26,10 @@
 			position: relative;
 			font-size: rem(20);
 			margin-bottom: 1em;
-			max-width: rem(570);
+				@include media-breakpoint-up(xl) {
+
+					max-width: rem(570);
+				}
 			&::before{
 				content: '';
 				position: absolute;
