@@ -8,7 +8,7 @@ mixin sNews()
 				mixin item(i,t,d, a)
 					+e.item.bg-wrap(href= a class="wow  animate__fadeInUp "   )
 						img.img-bg.lazy(src=`#` data-src=`img/@1x/${i}`, alt="")
-						+e.date= d
+						//- +e.date= d
 						+e.title= t
 				+item("news-1.jpg",'Открылась регистрация на онлайн-форум «Евразия Global»','10 августа 2020','news-start.html')
 				+item("news-1.jpg",'Registration for the online forum "Eurasia Global" is open!','August 10','news-start-eng.html')

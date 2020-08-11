@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sGal/_sGal.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sDay/_sDay.pug 
+include ../blocks/sMembers/_sMembers.pug 
+include ../blocks/sCards/_sCards.pug 
+include ../blocks/sLogos/_sLogos.pug  
+include ../blocks/sForm/_sForm.pug  
+include ../blocks/sNews/_sNews.pug  
+include ../blocks/sForMedia/_sForMedia.pug  
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Для СМИ»'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- //- +b.animate-items
+	//- - for (var x = 1; x < 13; x++)
+	//- 	+b.animate-item(class=`animate-item--${x}`  id=`animate-item--${x}`): img(src=`img/svg/el-${x}.svg`, alt="")
+	+header() 
+		+top-nav() 
+	+b.page-head.section
+		.container
+			+breadcrumb(title,'for-the-media.html')
+			h1= title
+	+sForMedia
+	+sNews
+	+sLogos
+	+sForm
+	+footer()
+	

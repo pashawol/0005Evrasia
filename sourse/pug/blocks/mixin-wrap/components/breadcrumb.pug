@@ -7,3 +7,15 @@ mixin breadcrumb(...items)
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )
 						span( itemprop="name")= items[i]
 						meta(itemprop="position" content= (i + 1) )
+
+mixin breadcrumb( t,a)
+	nav(aria-label="breadcrumb" )
+		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList") 
+				li.breadcrumb-item(  temprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='/' itemprop="item" )
+						span( itemprop="name") Главная
+						meta(itemprop="position" content="1" )
+				li.breadcrumb-item.active(  temprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href= a itemprop="item" )
+						span( itemprop="name")= t
+						meta(itemprop="position" content='2' )

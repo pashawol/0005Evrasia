@@ -38,8 +38,29 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/nav";
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
-@import "./node_modules/bootstrap/scss/breadcrumb";
+// @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb {
+	list-style: none;
+	padding-left: 0;
+	li{
+		display: inline-block;
+		margin-right: rem(10);
+	}
+	a{
+		color: #ffffff;
+		display: inline-block;
+		font-size: rem(14);
+		background-color: $primary;
+		border-radius: 4px;
+		padding: rem(6) rem(8) rem(4);
+		line-height: 1;
+	}
+	a:hover,
+	.active a { 
+			// color: $breadcrumb-active-color;
+		 color: $body-color;
+		 background: rgba(76, 192, 228, 0.2); 
+	}
 	.active {
 		a {
 			// color: $breadcrumb-active-color;
